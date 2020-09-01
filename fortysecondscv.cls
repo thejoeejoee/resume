@@ -59,6 +59,13 @@
 \definecolor{cvsidecolor}{HTML}{E7E7E7}
 \definecolor{cvsectioncolor}{HTML}{0395DE}
 \definecolor{cvsubsectioncolor}{HTML}{4D4D4D}
+
+% CUSTOM CODE
+
+\definecolor{cvviolet}{HTML}{4a148c}
+
+% END OF CUSTOM CODE
+
 % set default values
 \colorlet{maincolor}{cvblue}
 \colorlet{sidecolor}{cvsidecolor}
