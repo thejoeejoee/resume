@@ -8,4 +8,4 @@ resume-cs.pdf: resume-cs.tex
 	pdflatex resume-cs.tex
 
 flags:
-	git clone git@github.com:gosquared/flags.git
+	git clone https://github.com/gosquared/flags.git
