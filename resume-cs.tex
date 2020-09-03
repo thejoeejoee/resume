@@ -111,6 +111,7 @@
 % CUSTOM
 \graphicspath{{flags/flags/flags-iso/shiny/64/}{pics/}}
 
+\usepackage[czech]{babel}
 
 %-------------------------------------------------------------------------------
 %                            PERSONAL INFORMATION
@@ -119,7 +120,7 @@
 % your name
 \cvname{Josef Kolář}
 % job title/career
-\cvjobtitle{Full Stack Web Developer}
+\cvjobtitle{Full Stack web vývojář}
 
 %% optional information
 % profile picture
@@ -130,36 +131,33 @@
 % NOTE: ordering in sidebar will mimic the following order
 % date of birth
 \cvbirthday{28.02.1997}
-% short address/location, use \newline if more than 1 line is required
 \cvaddress{Litovel / Brno}
-% phone number
-\cvphone{+420 777 951 637}
-% personal website
 \cvsite{https://josefkolar.cz}
-% email address
 \cvmail{mail@josefkolar.cz}
-% pgp key
+\cvphone{+420 777 951 637}
 %\cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
-% any other custom entry
 \cvcustomdata{\faGithub}{\href{https://github.com/thejoeejoee}{@thejoeejoee}}
-
-\cvcustomdata{\faFlag}{Czech}
 
 %-------------------------------------------------------------------------------
 %                              SIDEBAR 1st PAGE
 %-------------------------------------------------------------------------------
 % add more profile sections to sidebar on first page
 \addtofrontsidebar{
-	\profilesection{Languages}
-	\pointskill{\flag{CZ.png}}{Czech}{5}
-	\pointskill{\flag{GB.png}}{English}{3}
-	\pointskill{\flag{LV.png}}{Latvian}{1}
-	\pointskill{\flag{DE.png}}{German}{1}
+	\profilesection{Primárně}
+		\skill{\faCode}{Python}
+		\skill{\faLaptopCode}{Javascript}
+		\skill{\faDatabase}{SQL}
 
-	\profilesection{Hard Skills}
+	\profilesection{Sekundárně}
 		\skill{\faBalanceScale}{Sleeping almost all day}
 		\skill{\faSitemap}{Eating a lot of bamboo sprouts}
 		\skill{\faGraduationCap}{Relaxing rest of the day}
+
+	\profilesection{Jazyky}
+	\pointskill{\flag{CZ.png}}{Čeština}{5}
+	\pointskill{\flag{GB.png}}{Angličtina}{3}
+	\pointskill{\flag{LV.png}}{Lotyština}{1}
+	\pointskill{\flag{DE.png}}{Němčina}{1}
 
 	\profilesection{Soft Skills}
 		\pointskill{\faHome}{Looking Cute}{4}[4]
@@ -234,7 +232,7 @@
 
 \makefrontsidebar
 
-\cvsection{Working Experience}
+\cvsection{Pracovní zkušenosti}
 \begin{cvtable}[3]
 	\cvitem{currently}{CEO The Panda Way}{Start Up}{Chief executive officer, Head
 		developer and yoga ambassador of 'The Panda Way' - A company from pandas
@@ -247,31 +245,28 @@
 \end{cvtable}
 
 
-\cvsection{Education}
-\cvsubsection{Postgraduate Training}
+\cvsection{Vzdělání}
 \begin{cvtable}[1.5]
-	\cvitem{2009 -- 2010}{Post-Doc Panda Studies}{Panda Academy}
-		{In-depth studies on the impact of bamboo nutrition for young pandas and
-		its relation to relaxing, sleeping and snoozing parts of the day.}
-	\cvitem{2008 -- 2009}{Research Stay Europe}{European Panda Labs}
-		{Spending one year abroad teaching european panda facilities about the
-		newest findings and research in the field of asian rice hat covers and
-		applications for bamboo as a material.}
-\end{cvtable}
 
+	\vspace{10pt}
+	\cvitem{2019 -- \textit{2022}}{Magisterské studium}{FIT VUT v Brně}
+	{Informační technologie a umělá inteligence -- Počítačové sítě}
 
-\cvsubsection{Study}
-\begin{cvtable}[1.5]
-	\cvitem{2006 -- 2008}{Master Studies Panda Science}{Panda Academy}
-		{Focus: Advanced rice hat studies and nouveau rain-reflecting cover
-		materials.}
-	\cvitem{}{Master Theses ($\varnothing\, 1,0$)}{Asian Rice Hat Institute}
-		{Impact of solar radiation onto rice hat cover materials with special
-		attention to water resistance.}
-	\cvitem{2003 -- 2006}{Bachelor Studies PandaScience}{Panda Academy}
-		{Focus: Bamboo morphology and its usage in different craftmanships.}
-	\cvitem{}{Bachelor Theses ($\varnothing\, 1,0$)}{Bamboo Institute}
-		{The bambo flute: An underestimated instrument in orchestras?}
+	\vspace{10pt}
+
+	\cvitem{2019 -- 2020}{Magisterské studium}{University of Latvia, Faculty of Computing}
+	{Zahraniční výjezd v rámci programu Erasmus na AR19/20}
+
+	\cvitem{2016 -- 2019}{Bakalářské studium}{FIT VUT v Brně}
+	{Informační technologie}
+
+	\vspace{10pt}
+
+	\cvitem{}{Bakalářská práce}{Ústav inteligentních systémů}{Koordinace IoT na bázi MicroPythonu pomocí Node-RED}
+
+	\cvitem{2012 -- 2016}{Střední průmyslová škola elektrotechnická}{Elektrotechnika}
+	{...}
+
 \end{cvtable}
 
 \cvsection{Publications}

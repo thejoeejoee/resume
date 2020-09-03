@@ -1,8 +1,11 @@
-all: fortysecondscv.cls resume.tex flags
+all: resume.pdf resume-cs.pdf flags
+
+
+resume.pdf: resume.tex
 	pdflatex resume.tex
 
-fortysecondscv.cls:
-	wget https://raw.githubusercontent.com/PandaScience/FortySecondsCV/master/fortysecondscv.cls
+resume-cs.pdf: resume-cs.tex
+	pdflatex resume-cs.tex
 
 flags:
 	git clone git@github.com:gosquared/flags.git

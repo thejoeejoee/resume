@@ -15,14 +15,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - run: make flags
 
-      - uses: ondrejsika/latex-build-github-action@master
+      - uses: dante-ev/latex-action@master
         with:
-          filename: resume.tex
+          root_file: resume.tex
 
-      - uses: ondrejsika/latex-build-github-action@master
+      - uses: dante-ev/latex-action@master
         with:
-          filename: resume-cs.tex
+          root_file: resume-cs.tex
+
       - run: mkdir -p build && mv *.pdf build/
 
       - uses: actions/upload-artifact@v1
