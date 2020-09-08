@@ -144,14 +144,14 @@
 % add more profile sections to sidebar on first page
 \addtofrontsidebar{
 	\profilesection{Primárně}
-		\skill{\faCode}{Python}
-		\skill{\faLaptopCode}{Javascript}
+		\skill{\faLaptopCode}{Python 2/3}
+		\skill{\faCode}{Javascript, Typescript}
 		\skill{\faDatabase}{SQL}
 
 	\profilesection{Sekundárně}
-		\skill{\faBalanceScale}{Sleeping almost all day}
-		\skill{\faSitemap}{Eating a lot of bamboo sprouts}
-		\skill{\faGraduationCap}{Relaxing rest of the day}
+		\skill{\faBalanceScale}{Linux, Docker}
+		\skill{\faSitemap}{C/C++, PHP}
+		\skill{\faGraduationCap}{...}
 
 	\profilesection{Jazyky}
 	\pointskill{\flag{CZ.png}}{Čeština}{5}
@@ -167,64 +167,6 @@
 			\skill[1.8em]{\faCompress}{In the grass}
 }
 
-
-%-------------------------------------------------------------------------------
-%                              SIDEBAR 2nd PAGE
-%-------------------------------------------------------------------------------
-\addtobacksidebar{
-	\profilesection{About Me}
-	\aboutme{
-		The giant panda is a terrestrial animal and primarily spends its life
-		roaming and feeding in the bamboo forests of the Qinling Mountains and in
-		the hilly province of Sichuan.
-	}
-
-	\profilesection{Diagrams}
-	\begin{sidebarminipage}
-		\chartlabel{Bubble}
-		\chartlabel{Diagrams}
-		\chartlabel{with}
-		\chartlabel{proper}
-		\chartlabel{overflow}
-		\chartlabel{protection}
-		\chartlabel{for}
-		\chartlabel{labels}
-	\end{sidebarminipage}
-
-	\begin{figure}\centering
-		\smartdiagram[bubble diagram]{
-			\textcolor{white}{\textbf{Being a}} \\
-			\textcolor{white}{\textbf{Panda}}, % center bubble
-			\textcolor{black!90}{Eating},
-			\textcolor{black!90}{Sleeping},
-			\textcolor{black!90}{Rolling},
-			\textcolor{black!90}{Playing},
-			\textcolor{black!90}{Chilling}
-		}
-	\end{figure}
-
-	\chartlabel{Wheel Chart}
-
-	\wheelchart{3.7em}{2em}{%
-	20/3em/maincolor!50/Chill,
-	15/3em/maincolor!15/Play,
-	30/4em/maincolor!40/Sleep,
-	20/3em/maincolor!20/Eat
-	}
-
-	\profilesection{Barskills}
-	\barskill{\faSkyatlas}{Wearing asian rice hats}{60}
-	\barskill{\faImage}{Playing Chess}{30}
-	\barskill{\faMusic}{Playing the bamboo flute}{50}
-
-	\profilesection{Memberships}
-	\begin{memberships}
-		% \membership[4em]{pics/logo.png}{PandaScience.net}
-		% \membership[4em]{pics/logo.png}{Some longer text spanning over more than only one line}
-	\end{memberships}
-}
-
-
 %-------------------------------------------------------------------------------
 %                         TABLE ENTRIES RIGHT COLUMN
 %-------------------------------------------------------------------------------
@@ -234,11 +176,20 @@
 
 \cvsection{Pracovní zkušenosti}
 \begin{cvtable}[2]
-	\cvitem{07/2014 -- 2019}{Junior developer}{OLC Systems s.r.o.}{
-		Reasearching the impact of adequate bamboo nutrition compared to
-		conventional feeding methods.}
-	\cvitem{2010 -- 2015}{Bamboo Broker}{Stock Exchange}{Continuously achieving
-		better bamboo bangs for the buck.}
+	\cvitem{2014 -- 2019}{Junior developer}{\href{https://www.olc.cz}{OLC Systems s.r.o.}}{
+	Vývoj interního komponentového frameworku a informačních (matričních, řídídích) systémů nad ním pro klienty
+	jako je Český florbal, Mobilní pohotovost či Česká jezdecká federace. \\Technologický stack založený na Pythonu 3,
+	Djangu, PostgreSQL a Angularu -- postupem času integrace Typescriptu, JS6, Vue.js, Webpacku
+	a dalších automatizačních nástrojů.
+	}
+	\cvitem{2010 -- dosud}{na volné noze}{}{
+		prezentační weby pro klienty --
+			\href{https://dortyodveverky.cz/}{Dorty od Veverky},
+			\href{https://roveda.cz/}{Roveda s.r.o.},
+			\href{http://autoskolacihal.cz/}{Autoškola Číhal},
+			\href{https://hornizleb.cz/}{Horní Žleb -- myslivecký informační systém},
+			\href{https://cadoktor.cz/}{CADoktor}
+	}
 \end{cvtable}
 
 
@@ -268,10 +219,71 @@
 \cvsection{Dobrovolnická činnost}
 \begin{cvtable}[2]
 	\cvitem{2017 -- 2020}{Rytířské tábory}{Sarkander z.s.}{...}
-	\cvitem{12/2019 -- 06/2020}{Člen a fotograf}{ESN Riga}{...}	
+	\cvitem{12/2019 -- 06/2020}{Člen a fotograf}{ESN Riga}{...}
 	\cvitem{2013 -- 2019}{Litovel MINICUP -- hlavní organizátor}{Tatran Litovel}{...}
 	\cvitem{08/2015 -- 06/2016}{Trenér házené -- mládež}{Tatran Litovel}{...}
 \end{cvtable}
+
+\cvsignature
+
+\end{document}
+
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 2nd PAGE
+%-------------------------------------------------------------------------------
+\addtobacksidebar{
+\profilesection{About Me}
+\aboutme{
+The giant panda is a terrestrial animal and primarily spends its life
+roaming and feeding in the bamboo forests of the Qinling Mountains and in
+the hilly province of Sichuan.
+}
+
+\profilesection{Diagrams}
+\begin{sidebarminipage}
+	\chartlabel{Bubble}
+	\chartlabel{Diagrams}
+	\chartlabel{with}
+	\chartlabel{proper}
+	\chartlabel{overflow}
+	\chartlabel{protection}
+	\chartlabel{for}
+	\chartlabel{labels}
+\end{sidebarminipage}
+
+\begin{figure}\centering
+\smartdiagram[bubble diagram]{
+\textcolor{white}{\textbf{Being a}} \\
+\textcolor{white}{\textbf{Panda}}, % center bubble
+\textcolor{black!90}{Eating},
+\textcolor{black!90}{Sleeping},
+\textcolor{black!90}{Rolling},
+\textcolor{black!90}{Playing},
+\textcolor{black!90}{Chilling}
+}
+\end{figure}
+
+\chartlabel{Wheel Chart}
+
+\wheelchart{3.7em}{2em}{%
+20/3em/maincolor!50/Chill,
+15/3em/maincolor!15/Play,
+30/4em/maincolor!40/Sleep,
+20/3em/maincolor!20/Eat
+}
+
+\profilesection{Barskills}
+\barskill{\faSkyatlas}{Wearing asian rice hats}{60}
+\barskill{\faImage}{Playing Chess}{30}
+\barskill{\faMusic}{Playing the bamboo flute}{50}
+
+\profilesection{Memberships}
+\begin{memberships}
+	% \membership[4em]{pics/logo.png}{PandaScience.net}
+	% \membership[4em]{pics/logo.png}{Some longer text spanning over more than only one line}
+\end{memberships}
+}
 
 
 \newpage
@@ -333,6 +345,5 @@
 		does not look too bad}{Authors}{Journal}{Year}
 \end{cvtable}
 
-\cvsignature
 
 \end{document}
