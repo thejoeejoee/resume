@@ -57,6 +57,12 @@
 \usepackage{microtype}
 \usepackage{ragged2e}
 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks = true,
+    urlcolor = cvviolet
+}
+
 % uncomment in case you don't want any hyphenation
 % \usepackage[none]{hyphenat}
 
@@ -108,9 +114,13 @@
 	bubble fill opacity = 0.8,
 }
 
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=0pt}
+
 % CUSTOM
 \graphicspath{{flags/flags/flags-iso/shiny/64/}{pics/}}
 
+\usepackage[czech]{babel}
 
 %-------------------------------------------------------------------------------
 %                            PERSONAL INFORMATION
@@ -119,7 +129,7 @@
 % your name
 \cvname{Josef Kolář}
 % job title/career
-\cvjobtitle{Full Stack Web Developer}
+\cvjobtitle{Full Stack web developer}
 
 %% optional information
 % profile picture
@@ -128,104 +138,44 @@
 % \cvlogopic{pics/profile.jpg}
 
 % NOTE: ordering in sidebar will mimic the following order
-% date of birth
-\cvbirthday{28.02.1997}
-% short address/location, use \newline if more than 1 line is required
 \cvaddress{Litovel / Brno}
-% phone number
-\cvphone{+420 777 951 637}
-% personal website
 \cvsite{https://josefkolar.cz}
-% email address
 \cvmail{mail@josefkolar.cz}
-% pgp key
 %\cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
-% any other custom entry
 \cvcustomdata{\faGithub}{\href{https://github.com/thejoeejoee}{@thejoeejoee}}
-
-\cvcustomdata{\faFlag}{Czech}
+\cvphone{+420 777 951 637}
 
 %-------------------------------------------------------------------------------
 %                              SIDEBAR 1st PAGE
 %-------------------------------------------------------------------------------
-% add more profile sections to sidebar on first page
+
 \addtofrontsidebar{
+	\profilesection{Primary}
+		\pointskill{\faLaptopCode}{Python, Django}{5}[6]
+		\pointskill{\faCode}{Vue.js, Nuxt.js}{4}[6]
+		\pointskill{\faFileCode}{Typescript, ES6}{4}[6]
+		\pointskill{\faCompress}{CSS, Tailwind.css}{4}[6]
+		\pointskill{\faDatabase}{PostgreSQL, MySQL}{3}[6]
+
+	\profilesection{Secondary}
+		\skill{\faServer}{Linux, Docker, Webpack}
+		\skill{\faLaptop}{C/C++, PHP, Nette}
+		\skill{\faProjectDiagram}{{\large \LaTeX}, Git, VHDL}
+
 	\profilesection{Languages}
-	\pointskill{\flag{CZ.png}}{Czech}{5}
-	\pointskill{\flag{GB.png}}{English}{3}
-	\pointskill{\flag{LV.png}}{Latvian}{1}
-	\pointskill{\flag{DE.png}}{German}{1}
+		\pointskill{\flag{CZ.png}}{Czech}{6}[6]
+		\pointskill{\flag{GB.png}}{English}{4}[6]
+		\pointskill{\flag{LV.png}}{Latvia}{1}[6]
+		\pointskill{\flag{DE.png}}{German}{1}[6]
 
-	\profilesection{Hard Skills}
-		\skill{\faBalanceScale}{Sleeping almost all day}
-		\skill{\faSitemap}{Eating a lot of bamboo sprouts}
-		\skill{\faGraduationCap}{Relaxing rest of the day}
-
-	\profilesection{Soft Skills}
-		\pointskill{\faHome}{Looking Cute}{4}[4]
-			\skill[1.8em]{\faCompress}{No need to specify further}
-		\pointskill{\faChild}{Chillin' hard}{3}[4]
-			\skill[1.8em]{\faCompress}{On a tree}
-			\skill[1.8em]{\faCompress}{In the grass}
-}
-
-
-%-------------------------------------------------------------------------------
-%                              SIDEBAR 2nd PAGE
-%-------------------------------------------------------------------------------
-\addtobacksidebar{
-	\profilesection{About Me}
-	\aboutme{
-		The giant panda is a terrestrial animal and primarily spends its life
-		roaming and feeding in the bamboo forests of the Qinling Mountains and in
-		the hilly province of Sichuan.
-	}
-
-	\profilesection{Diagrams}
-	\begin{sidebarminipage}
-		\chartlabel{Bubble}
-		\chartlabel{Diagrams}
-		\chartlabel{with}
-		\chartlabel{proper}
-		\chartlabel{overflow}
-		\chartlabel{protection}
-		\chartlabel{for}
-		\chartlabel{labels}
-	\end{sidebarminipage}
-
-	\begin{figure}\centering
-		\smartdiagram[bubble diagram]{
-			\textcolor{white}{\textbf{Being a}} \\
-			\textcolor{white}{\textbf{Panda}}, % center bubble
-			\textcolor{black!90}{Eating},
-			\textcolor{black!90}{Sleeping},
-			\textcolor{black!90}{Rolling},
-			\textcolor{black!90}{Playing},
-			\textcolor{black!90}{Chilling}
+	\profilesection{About me}
+		\aboutme{
+			I'm a talkative and extroverted person. I enjoy problem-solving and care about the world's sustainability.
+			As a volunteer, I am spending my time with youth as a children's camp organiser
+			or with helping international students in Brno.
+			My free time is about documentaries, cryptocurrencies, sports or photography.
 		}
-	\end{figure}
-
-	\chartlabel{Wheel Chart}
-
-	\wheelchart{3.7em}{2em}{%
-	20/3em/maincolor!50/Chill,
-	15/3em/maincolor!15/Play,
-	30/4em/maincolor!40/Sleep,
-	20/3em/maincolor!20/Eat
-	}
-
-	\profilesection{Barskills}
-	\barskill{\faSkyatlas}{Wearing asian rice hats}{60}
-	\barskill{\faImage}{Playing Chess}{30}
-	\barskill{\faMusic}{Playing the bamboo flute}{50}
-
-	\profilesection{Memberships}
-	\begin{memberships}
-		% \membership[4em]{pics/logo.png}{PandaScience.net}
-		% \membership[4em]{pics/logo.png}{Some longer text spanning over more than only one line}
-	\end{memberships}
 }
-
 
 %-------------------------------------------------------------------------------
 %                         TABLE ENTRIES RIGHT COLUMN
@@ -234,68 +184,165 @@
 
 \makefrontsidebar
 
-\cvsection{Working Experience}
-\begin{cvtable}[3]
-	\cvitem{currently}{CEO The Panda Way}{Start Up}{Chief executive officer, Head
-		developer and yoga ambassador of 'The Panda Way' - A company from pandas
-		for pandas.}
-	\cvitem{2015 -- 2018}{Panda Scientist}{Bamboo University}{
-		Reasearching the impact of adequate bamboo nutrition compared to
-		conventional feeding methods.}
-	\cvitem{2010 -- 2015}{Bamboo Broker}{Stock Exchange}{Continuously achieving
-		better bamboo bangs for the buck.}
-\end{cvtable}
+% {\large{Jsem zapálený Python vývojář s přesahem do frontend technologií.}}
 
+% \vspace{-\baselineskip}
+\cvsection{Work experiences}
+
+\begin{cvtable}[2]
+	\cvitem{2010 -- now}{Freelancer}{}{
+	\vspace{-\baselineskip}
+		\begin{itemize}
+		\setlength\itemsep{0pt}
+			\item client websites and small information systems
+			\item Django, Vue.js, Bootstrap
+			\item projects like
+			\href{https://na.brnodobry.cz/}{NA Brno dobrý 2022},
+			\href{https://prace.spseol.cz/}{Theses evidence Thesaurus},
+			\href{https://dortyodveverky.cz/}{Dorty od Veverky},
+			\href{https://roveda.cz/}{Roveda s.r.o.},
+			\href{https://hornizleb.cz/}{Myslivecký informační systém Horní Žleb},
+			\href{https://cadoktor.cz/}{CADoktor}
+		\end{itemize}
+	}
+	\cvitem{2014 -- 2019}{Junior full stack developer}{\href{https://www.olc.cz}{OLC Systems s.r.o.}}{
+	\vspace{-\baselineskip}
+	\begin{itemize}
+		\setlength\itemsep{0pt}
+		\item development of internal component framework
+		\item development of information (evidence or control) systems
+		\item work in small team for companies like Český florbal, Mobilní pohotovost, Česká jezdecká federace či Spro
+		\item Python, Django, PostgreSQL, Angular, Bootstrap CSS
+		\item continuous migration to Typescript, Vue.js and Webpack
+	\end{itemize}
+	}
+
+\end{cvtable}
 
 \cvsection{Education}
-\cvsubsection{Postgraduate Training}
-\begin{cvtable}[1.5]
-	\cvitem{2009 -- 2010}{Post-Doc Panda Studies}{Panda Academy}
-		{In-depth studies on the impact of bamboo nutrition for young pandas and
-		its relation to relaxing, sleeping and snoozing parts of the day.}
-	\cvitem{2008 -- 2009}{Research Stay Europe}{European Panda Labs}
-		{Spending one year abroad teaching european panda facilities about the
-		newest findings and research in the field of asian rice hat covers and
-		applications for bamboo as a material.}
+\begin{cvtable}[2]
+	\cvitem{2016 -- 2022}{Faculty of Information Technology}{Brno University of Technology}{
+	\vspace{-\baselineskip}
+	\begin{description}
+		\setlength\itemsep{0pt}
+		\item[Master degree] Information Technology and Artificial Intelligence -- Computer Networks (not finished)
+		\item[ERASMUS+] {\small(08/2019-06/2020)}\\ University of Latvia, Faculty of Computing
+		\item[Bachelor degree] Information Technology
+ -- bachelor thesis \href{https://www.fit.vut.cz/study/thesis/21632/.en}{Coordination of MicroPython-Based IoT by Means of Node-RED}
+	\end{description}
+	}
+	\cvitem{2012 -- 2016}{High Electrical School}{Olomouc}
+		{graduation thesis: \href{https://github.com/spseol/pybots-server/releases/download/v1.0/docs.pdf}{Virtual robots combats}}
 \end{cvtable}
 
-
-\cvsubsection{Study}
-\begin{cvtable}[1.5]
-	\cvitem{2006 -- 2008}{Master Studies Panda Science}{Panda Academy}
-		{Focus: Advanced rice hat studies and nouveau rain-reflecting cover
-		materials.}
-	\cvitem{}{Master Theses ($\varnothing\, 1,0$)}{Asian Rice Hat Institute}
-		{Impact of solar radiation onto rice hat cover materials with special
-		attention to water resistance.}
-	\cvitem{2003 -- 2006}{Bachelor Studies PandaScience}{Panda Academy}
-		{Focus: Bamboo morphology and its usage in different craftmanships.}
-	\cvitem{}{Bachelor Theses ($\varnothing\, 1,0$)}{Bamboo Institute}
-		{The bambo flute: An underestimated instrument in orchestras?}
+\cvsection{Volunteering}
+\begin{cvtable}[2]
+	\vspace{-\baselineskip}
+	\cvitem{2020 -- now}{ESN VUT Brno, ESN Riga}{}{
+	\begin{description}
+		\vspace{-\baselineskip}
+		\setlength\itemsep{0pt}
+		\item[IT Coordinator] {\small(09/20-)} -- websites managing, development of tools used for process automation, development of IS used for students pairing
+		\item[Multimedia Manager] {\small(09/20-)} -- photo/video making from events
+		\item[Events Manager] {\small(06/21-05/22)} -- leading team responsible for all events for international students
+		\item[Knowledge Manager] {\small(09/20-05/21)} -- knowledge management in section's Google Drive
+	\end{description}
+	}
+	\vspace{-\baselineskip}
+	\cvitem{2017 -- now}{\href{https://rytirskytabor.cz/}{Gotic children camp} -- main organizer}{Sarkander, z.s.}{
+	\vspace{-\baselineskip}
+	\begin{itemize}
+		\setlength\itemsep{0pt}
+		\item board member responsible for applications and PR
+		\item author of camp narrative and program
+		\item responsible for photo/video reports
+	\end{itemize}
+	}
+	\cvitem{2013 -- 2019}{\href{https://minicup-archiv.tatranlitovel.cz/}{Litovel MINICUP} -- organizer}{TJ Tatran Litovel}{
+	\vspace{-\baselineskip}
+	\begin{itemize}
+		\setlength\itemsep{0pt}
+		\item leading technical team for handball tournament
+		\item website and live-streams
+		\item responsible for social networks content
+	\end{itemize}
+	}
+	%	\cvitem{12/2019 -- 06/2020}{Fotograf}{ESN Riga}{
+	%		Na zahraničním výjezdu v Rize jsem se připojil ke studentské
+	%		organizaci a pomáhal pořádat akce pro přijíždějící studenty,
+	%		ze kterých jsem následně dělal i fotoreportáže.
+	%	}
+	%	\cvitem{08/2015 -- 06/2016}{Trenér házené -- mládež}{TJ Tatran Litovel}{
+	%		Poznatky ze své hráčské a rozhodcovské kariéry jsem po celou sezónu předával mladým házenkářům ve věku 6-8 let.
+	%	}
 \end{cvtable}
 
-\cvsection{Publications}
-\begin{cvtable}
-	\cvpubitem{Cooking: 100 recipes for lazy Pandas}{Me and My Panda Friends}
-		{Panda's Culinary World}{2010}
-	\cvpubitem{Pandastasia}{Still Me}{Bamboo Books Assoc.}{2005}
-\end{cvtable}
+% \cvsignature
+
+\end{document}
 
 
-\cvsection{Awards}
-\begin{cvtable}
-	\cvitem{2010 -- now}{Panda of the Year}{Panda World Forum}{}
-	\cvitem{2005 -- now}{Face of World Wide Fund for Nature}{WWF}{}
-	\cvitem{2000}{Winner of Bamboo Sprouts Eating Contest}{Bamboo Society}{}
-\end{cvtable}
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 2nd PAGE
+%-------------------------------------------------------------------------------
+\addtobacksidebar{
+\profilesection{About Me}
+\aboutme{
+The giant panda is a terrestrial animal and primarily spends its life
+roaming and feeding in the bamboo forests of the Qinling Mountains and in
+the hilly province of Sichuan.
+}
+\profilesection{Soft Skills}
+\pointskill{\faHome}{Looking Cute}{4}[4]
+\skill[1.8em]{\faCompress}{No need to specify further}
+\pointskill{\faChild}{Chillin' hard}{3}[4]
+\skill[1.8em]{\faCompress}{On a tree}
+\skill[1.8em]{\faCompress}{In the grass}
 
+\profilesection{Diagrams}
+\begin{sidebarminipage}
+	\chartlabel{Bubble}
+	\chartlabel{Diagrams}
+	\chartlabel{with}
+	\chartlabel{proper}
+	\chartlabel{overflow}
+	\chartlabel{protection}
+	\chartlabel{for}
+	\chartlabel{labels}
+\end{sidebarminipage}
 
-\cvsection{Extra-Curricular Activities}
-\begin{cvtable}
-	\cvitemshort{Relaxing}{Master the fine art of relaxing everywhere}
-	\cvitemshort{Music}{Playing the bamboo flute in the 1st Panda Orchestra}
-	\cvitemshort{Education}{Teaching young pandas to be more panda-like}
-\end{cvtable}
+\begin{figure}\centering
+\smartdiagram[bubble diagram]{
+\textcolor{white}{\textbf{Being a}} \\
+\textcolor{white}{\textbf{Panda}}, % center bubble
+\textcolor{black!90}{Eating},
+\textcolor{black!90}{Sleeping},
+\textcolor{black!90}{Rolling},
+\textcolor{black!90}{Playing},
+\textcolor{black!90}{Chilling}
+}
+\end{figure}
+
+\chartlabel{Wheel Chart}
+
+\wheelchart{3.7em}{2em}{%
+20/3em/maincolor!50/Chill,
+15/3em/maincolor!15/Play,
+30/4em/maincolor!40/Sleep,
+20/3em/maincolor!20/Eat
+}
+
+\profilesection{Barskills}
+\barskill{\faSkyatlas}{Wearing asian rice hats}{60}
+\barskill{\faImage}{Playing Chess}{30}
+\barskill{\faMusic}{Playing the bamboo flute}{50}
+
+\profilesection{Memberships}
+\begin{memberships}
+	% \membership[4em]{pics/logo.png}{PandaScience.net}
+	% \membership[4em]{pics/logo.png}{Some longer text spanning over more than only one line}
+\end{memberships}
+}
 
 
 \newpage
@@ -357,6 +404,5 @@
 		does not look too bad}{Authors}{Journal}{Year}
 \end{cvtable}
 
-\cvsignature
 
 \end{document}
