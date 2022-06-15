@@ -4,7 +4,5 @@ Based on template ![FortySecondsCV](https://github.com/PandaScience/FortySeconds
 
 ## Compile
 
-`make`
-
-After that file `resume.pdf` is produced as compiled final result.
+After `make`, `kolar-josef-cv-cs.pdf` and `kolar-josef-cv-en.pdf` are produced.
 
